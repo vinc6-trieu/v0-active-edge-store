@@ -117,6 +117,13 @@ export default function HomePage() {
   const [productDisplayCount, setProductDisplayCount] = useState(6)
   const [blogDisplayCount, setBlogDisplayCount] = useState(3)
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   const handleLoadMoreProducts = () => {
     setProductDisplayCount((prev) => Math.min(prev + 3, allProducts.length))
   }
@@ -153,13 +160,14 @@ export default function HomePage() {
             Đổi mới kỹ thuật kết hợp thiết kế tiên tiến. Chúng tôi tạo ra đồ thể thao vượt qua giới hạn hiệu suất.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg">
+            <Button size="lg" className="text-lg" onClick={() => scrollToSection("products")}>
               Khám Phá Sản Phẩm
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="text-lg bg-secondary-foreground/10 hover:bg-secondary-foreground/20 text-secondary-foreground border-secondary-foreground/20"
+              onClick={() => scrollToSection("overview")}
             >
               Tìm Hiểu Thêm
             </Button>
