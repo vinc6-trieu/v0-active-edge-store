@@ -13,55 +13,46 @@ const allProducts = [
   {
     name: "Áo Khoác Chạy Bộ AeroTech",
     category: "Đồ Ngoài Trời",
-    price: "5.990.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Quần Short Tập Luyện ProFit",
     category: "Đồ Thể Thao",
-    price: "2.190.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Áo Khoác Mùa Đông Summit",
     category: "Đồ Ngoài Trời",
-    price: "9.790.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Áo Thun Tập Luyện DryFit",
     category: "Đồ Thể Thao",
-    price: "1.490.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Quần Yoga FlexCore",
     category: "Đồ Thể Thao",
-    price: "2.790.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Áo Khoác Gió UltraLight",
     category: "Đồ Ngoài Trời",
-    price: "3.990.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Áo Nỉ Thể Thao TechFleece",
     category: "Đồ Thể Thao",
-    price: "3.490.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Giày Chạy Bộ SpeedMax",
     category: "Giày Dép",
-    price: "4.990.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
   {
     name: "Áo Khoác Leo Núi Alpine",
     category: "Đồ Ngoài Trời",
-    price: "12.990.000₫",
     image: "/placeholder.svg?height=400&width=400",
   },
 ]
@@ -284,8 +275,7 @@ export default function HomePage() {
                 </div>
                 <CardContent className="p-6">
                   <div className="text-sm text-accent font-semibold mb-2">{product.category}</div>
-                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                  <div className="text-2xl font-bold text-primary">{product.price}</div>
+                  <h3 className="text-xl font-bold">{product.name}</h3>
                 </CardContent>
               </Card>
             ))}
